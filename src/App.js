@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Decrement from "./Decrement"
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <>
+        <Decrement number={5}/>
+        <Decrement number={10} />
+        <Decrement number={20} />
+        <Decrement number={40} />
+        <Decrement number={80} />
+      </>
+    )
+  }
 }
 
 export default App;
